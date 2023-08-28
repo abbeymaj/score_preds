@@ -1,5 +1,6 @@
-from setuptools import setup, find_packages
 from typing import List
+from setuptools import setup, find_packages
+
 
 
 # Creating a constant to remove -e .
