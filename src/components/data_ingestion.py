@@ -24,4 +24,11 @@ class DataIngestion():
     
     # Creating a function to ingest the data
     def initiate_data_ingestion(self):
-        pass
+        logging.info("Started the data ingestion process.")
+        try:
+            # Reading as pandas dataframe
+            df = pd.read_csv('Notebook\Data\student.csv')
+            logging.info("Read the dataset as a pandas dataframe.")
+        except Exception as e:
+            raise CustomException(e, sys)
+        
