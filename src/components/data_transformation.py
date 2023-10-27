@@ -5,6 +5,7 @@ import os
 import sys
 from src.exception import CustomException
 from src.logger import logging
+from src.utils import save_object
 from dataclasses import dataclass
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
@@ -56,7 +57,7 @@ class DataTransformation():
                 steps=[
                     ('cat_imputer', SimpleImputer(strategy='most_frequent')),
                     ('ohe', OneHotEncoder()),
-                    ('cat_scaler', StandardScaler())
+                    ('cat_scaler', StandardScaler(with_mean=False))
                 ]
             )
             
