@@ -29,7 +29,7 @@ class DataTransformation():
     # Creating a function for data transformation
     def get_data_transformation_object(self):
         '''
-        This function is responsible for transforming the data.
+        This function creates the preprocessing object to transform the data.
         '''
         try:
             # Defining numerical and categorical columns
@@ -78,6 +78,9 @@ class DataTransformation():
         
     # Creating a function to initiate the data transformation    
     def initiate_data_transformation(self, train_path, test_path):
+        '''
+        This function enables the transformation of the data.
+        '''
         try:
             # Reading the train and test datasets
             train_df = pd.read_csv(train_path)
